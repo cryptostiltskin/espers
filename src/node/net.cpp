@@ -17,10 +17,10 @@
 #endif
 
 #ifdef USE_UPNP
-#include <miniupnpc-2.1/miniupnpc.h>
-#include <miniupnpc-2.1/miniwget.h>
-#include <miniupnpc-2.1/upnpcommands.h>
-#include <miniupnpc-2.1/upnperrors.h>
+#include <miniupnpc/miniupnpc.h>
+#include <miniupnpc/miniwget.h>
+#include <miniupnpc/upnpcommands.h>
+#include <miniupnpc/upnperrors.h>
 #endif
 
 #include <boost/filesystem.hpp>
@@ -620,7 +620,7 @@ void CNode::copyStats(CNodeStats &stats)
     // Raw ping time is in microseconds, but show it to user as whole seconds (Bitcoin users should be well used to small numbers with many decimal places by now :)
     stats.dPingTime = (((double)nPingUsecTime) / 1e6);
     stats.dPingWait = (((double)nPingUsecWait) / 1e6);
-    
+
     // Leave string empty if addrLocal invalid (not filled in yet)
     stats.addrLocal = addrLocal.IsValid() ? addrLocal.ToString() : "";
 }
