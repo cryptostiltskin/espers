@@ -63,7 +63,7 @@ public:
         const char* pszTimestamp = "Krypton Abandons Ethereum for Bitcoin Proof of Stake Blockchain after 51% Attack : Mon, 05 Sep 2016 07:00:00 GMT";
         std::vector<CTxIn> vin;
         vin.resize(1);
-        vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
+        vin[0].scriptSig = CScript() << 0 << CScriptNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         std::vector<CTxOut> vout;
         vout.resize(1);
         vout[0].SetEmpty();
